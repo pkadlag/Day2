@@ -1,0 +1,266 @@
+Array methods:
+1.	Concat():Click the button to join two arrays.
+ans.
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to join two arrays.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var hege = ["Cecilie", "Lone"];
+    var stale = ["Emil", "Tobias", "Linus"];
+    var children = hege.concat(stale); 
+    document.getElementById("demo").innerHTML = children;
+}
+</script>
+
+</body>
+</html>
+
+2. push()
+   push()
+  The push() method appends a new element to an array.
+
+ans.
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array Methods</h2> 
+
+<h2>push()</h2>
+
+<p>The push() method appends a new element to an array.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits;
+
+function myFunction() {
+    fruits.push("Kiwi");
+    document.getElementById("demo").innerHTML = fruits;
+}
+</script>
+
+</body>
+</html>
+
+3. sort() Sorts the elements of an array
+
+ans.
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to sort the array.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits;
+
+function myFunction() {
+    fruits.sort();
+    document.getElementById("demo").innerHTML = fruits;
+}
+</script>
+
+</body>
+</html>
+
+4.shift() Removes the first element of an array, and returns that element
+ans
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to remove the first element of the array.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits;
+
+function myFunction() {
+    fruits.shift();
+    document.getElementById("demo").innerHTML = fruits;
+}
+</script>
+
+</body>
+</html>
+
+5.reverse() Reverses the order of the elements in an array
+ans.
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to reverse the order of the elements in the array.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits;
+
+function myFunction() {
+    fruits.reverse();
+    document.getElementById("demo").innerHTML = fruits;
+}
+</script>
+
+</body>
+</html>
+
+6.fill() Fill the elements in an array with a static value
+ans.
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to fill all the array elements with the value "Kiwi".</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<p><strong>Note:</strong> The fill() method is not supported in IE 11 (and earlier versions).</p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits;
+
+function myFunction() {  
+    document.getElementById("demo").innerHTML = fruits.fill("Kiwi");
+}
+</script>
+
+</body>
+</html>
+
+ 7.pop() Removes the last element of an array, and returns that element
+ans.
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to remove the last element from the array.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits;
+
+function myFunction() {
+    fruits.pop();
+    document.getElementById("demo").innerHTML = fruits;
+}
+</script>
+
+</body>
+</html>
+
+8.toString() Converts an array to a string, and returns the result
+ans.
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to convert the array into a String.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits.toString();
+    document.getElementById("demo").innerHTML = fruits;
+}
+</script>
+
+</body>
+</html>
+ 9. copyWithin() Copies array elements within the array, to and from specified positions
+ans.
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to copy the first two array elements to the last two array elements.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<p><strong>Note:</strong> The copyWithin() method is not supported in IE 11 (and earlier versions).</p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits;
+
+function myFunction() {  
+    document.getElementById("demo").innerHTML = fruits.copyWithin(2,0);
+}
+</script>
+
+</body>
+</html>
+
+10. reduce() Reduce the values of an array to a single value (going left-to-right)
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to get the sum of the numbers in the array.</p>
+<button onclick="myFunction()">Try it</button>
+
+<p>Sum of numbers in array: <span id="demo"></span></p>
+
+<script>
+var numbers = [65, 44, 12, 4];
+
+function getSum(total, num) {
+    return total + num;
+}
+function myFunction(item) {
+    document.getElementById("demo").innerHTML = numbers.reduce(getSum);
+}
+</script>
+
+</body>
+</html>
+
+11.sort() with compare function
+ans.
+var arr=[1,22,2000,2,3,250];
+console.log(arr);
+var sortedArray = arr.sort(function(a,b){
+    return (b-a);
+});
+console.log(arr);
+
+
